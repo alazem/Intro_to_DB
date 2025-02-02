@@ -15,8 +15,7 @@ def create_connection():
             print("Database created successfully") 
     except mysql.connector.Error as e:
         print(f"The MySQLServer error '{e}' occurred")
-    except Error as e:
-        print(f"The error '{e}' occurred")
+   
     finally:
         # Close connection
         if 'cursor' in locals():
