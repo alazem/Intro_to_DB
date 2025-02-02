@@ -13,6 +13,8 @@ def create_connection():
             cursor = connection.cursor()
             cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
             print("Database created successfully") 
+    except mysql.connector.Error as e:
+        print(f"The MySQLServer error '{e}' occurred")
     except Error as e:
         print(f"The error '{e}' occurred")
     finally:
